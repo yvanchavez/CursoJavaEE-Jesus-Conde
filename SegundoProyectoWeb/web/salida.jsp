@@ -14,18 +14,24 @@
     <body>
         <h1>Gracias por cubrir nuestra encuesta</h1>
 
-        <p><%= request.getParameter("nombreCompleto")%>,
-            Nos has indicado que estas familiarizado con los siguientes lenguajes de programacion:</p>
+        <p>
+            <jsp:getProperty name="datosEncuesta" property="nombreCompleto" />,
+
+            Nos has indicado que estas familiarizado con los siguientes lenguajes de programacion:
+            <jsp:useBean id="datosEncuesta" scope="request" class="com.videotutoriales.primera.modelo.DatosEncuesta" />
+        </p>
 
         <ul>
             <%
-                String[] lenguajesSeleccionado = request.getParameterValues("progLeng");
+                
+                String[] lenguajesSeleccionado = datosEncuesta.getProgLeng();
                 if (lenguajesSeleccionado != null) {
                     for (int i = 0; i < lenguajesSeleccionado.length; i++) {
 
 
             %>
             <li>
+                
                 <%=lenguajesSeleccionado[i]%>
             </li>
             <%}

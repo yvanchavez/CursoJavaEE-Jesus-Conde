@@ -15,7 +15,7 @@
         <h1>Bienvenido a la encuesta para desarrolladores</h1>
         <p>Indica los lenguajes de programación con los que estas familiarizado</p>
 
-        <form action="salida.jsp">
+        <form action="ServletController" method="post">
             <table border="0">
                 <tbody>
                     <tr>
