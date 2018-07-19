@@ -13,26 +13,6 @@
     </head>
     <body>
         <h1>Por favor escribe tu usuario y contraseña</h1>
-        <form action="j_security_check" method="POST">
-            <table border="0">
-               
-                <tbody>
-                    <tr>
-                        <td>Nombre de Usuario:</td>
-                        <td><input type="text" name="j_username" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Contraseña:</td>
-                        <td><input type="password" name="j_password" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" value="Login" /></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            
-        </form>
+        <%@include file="WEB-INF/jspf/formulariologin.jspf" %>
     </body>
 </html>
